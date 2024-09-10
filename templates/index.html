@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azure Instance Metadata</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Azure Instance Metadata</h1>
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% else %}
+            <pre><code>{{ metadata }}</code></pre>
+        {% endif %}
+    </div>
+</body>
+</html>
